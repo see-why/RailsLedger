@@ -1,0 +1,15 @@
+<h1>Categories</h1>
+
+<div id="groups">
+  <% @groups.each do |group| %>
+    <%= render group %>
+    <p>
+      <%= link_to "Show this group", group %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New Category", new_group_path %>
+<% if user_signed_in? %>
+<%= button_to "Log-out", destroy_user_session_path, :method => :delete, class:"nav-link" %>
+<% end %>
