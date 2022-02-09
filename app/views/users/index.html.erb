@@ -1,14 +1,4 @@
-<p style="color: green"><%= notice %></p>
+<h1>Welcome to Rails Ledger!.</h1>
 
-<h1>Users</h1>
-
-<div id="users">
-  <% @users.each do |user| %>
-    <%= render user %>
-    <p>
-      <%= link_to "Show this user", user %>
-    </p>
-  <% end %>
-</div>
-
-<%= link_to "New user", new_user_path %>
+<%= link_to "Log in", new_user_session_path, class:"notlogged-btn signin" %>
+<%= link_to "Create account", new_user_registration_path, class:"notlogged-btn create" %>
