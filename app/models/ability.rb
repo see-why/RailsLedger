@@ -1,11 +1,9 @@
-# frozen_string_literal: true
-
 class Ability
   include CanCan::Ability
 
   def initialize(user)
     # Define abilities for the passed in user here. For example:
-    can :manage, Entity, author_id: user.id
+    can :manage, Record, author_id: user.id
     can :manage, Group, author_id: user.id
     can :read, :all
     #
