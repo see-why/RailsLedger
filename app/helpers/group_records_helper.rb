@@ -1,2 +1,2 @@
-module GroupEntitiesHelper
+module GroupRecordsHelper
 end
