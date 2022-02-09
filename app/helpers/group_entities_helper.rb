@@ -1,0 +1,2 @@
+module GroupEntitiesHelper
+end
