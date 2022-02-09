@@ -1,4 +1,4 @@
 class GroupRecord < ApplicationRecord
-  belongs_to :entity
+  belongs_to :record
   belongs_to :group
 end
