@@ -3,12 +3,12 @@
 <h1>Records</h1>
 
 <div id="records">
-  <% @records.each do |entity| %>
+  <% @records.each do |record| %>
     <%= render record %>
     <p>
-      <%= link_to "Show this Record", entity %>
+      <%= link_to "Show this Record", record %>
     </p>
   <% end %>
 </div>
 
-<%= link_to "New Record", new_entity_path %>
+<%= link_to "New Record", new_record_path %>
