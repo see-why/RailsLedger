@@ -1,17 +1,23 @@
-<div id="<%= dom_id group %>">
+<div id="<%= dom_id group %>" class="flex">
+  <div class="image-div">
+    <%= image_tag(group.icon, class: 'category-image') %>
+  </div>
+
+  <div>
   <p>
-    <strong>Name:</strong>
-    <%= group.name %>
+    <%= link_to "#{group.name}", group %>
   </p>
 
   <p>
-    <strong>User:</strong>
-    <%= group.user_id %>
+    <strong> Records # </strong>
+    <%= group.total_record %>
   </p>
 
   <p>
     <strong>$</strong>
-    <%= group.user_id %>
+    <%= group.total_record_amount %>
   </p>
 
+  <p><%= group.created_at.strftime('%d %b %Y') %></p>
+  </div>
 </div>
