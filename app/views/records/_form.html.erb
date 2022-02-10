@@ -1,3 +1,4 @@
+<%= link_to "Back to categories", groups_path %>
 <%= form_with(model: record) do |form| %>
   <% if record.errors.any? %>
     <div style="color: red">
@@ -22,8 +23,8 @@
   </div>
 
   <div>
-    <%= form.label :user_id, style: "display: block" %>
-    <%= form.text_field :user_id %>
+  <%= form.label "Categories", class: "unit-label", style: "display: block" %>
+  <%= form.select :groups, @categories.collect { |category| [category.name, category.id] }, {class: "full-width"}, {multiple: true} %>
   </div>
 
   <div>

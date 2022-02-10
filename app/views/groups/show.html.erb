@@ -1,10 +1,14 @@
-<p style="color: green"><%= notice %></p>
-
+<%= link_to "Back to categories", groups_path %>
 <%= render @group %>
+
+<div id="records">
+  <% @group.records.order(id: :desc).each do |record| %>
+    <%= render partial: "records/record",  locals: {record: record} %>
+  <% end %>
+</div>
 
 <div>
   <%= link_to "Edit this group", edit_group_path(@group) %> |
-  <%= link_to "Back to groups", groups_path %>
-
+  <%= link_to "Add new Record", new_record_path %>
   <%= button_to "Destroy this group", @group, method: :delete %>
 </div>
