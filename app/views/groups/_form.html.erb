@@ -1,3 +1,4 @@
+<%= link_to "Back to categories", groups_path %>
 <%= form_with(model: group) do |form| %>
   <% if group.errors.any? %>
     <div style="color: red">
@@ -17,8 +18,8 @@
   </div>
 
   <div>
-    <%= form.label :user_id, style: "display: block" %>
-    <%= form.text_field :user_id %>
+    <%= form.label :icon, style: "display: block" %>
+    <%= form.file_field :icon %>
   </div>
 
   <div>
