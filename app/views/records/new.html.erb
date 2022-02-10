@@ -1,4 +1,8 @@
-<h1>New Record</h1>
+<header class="category-header flex">
+  <%= link_to groups_path do%><i class="fa fa-arrow-left ham"></i><% end %>
+  <h2>NEW RECORD</h2>
+  <input type="submit" value="Save" form="record-form" class="save-button">
+</header>
 
 <%= render "form", record: @record %>
 

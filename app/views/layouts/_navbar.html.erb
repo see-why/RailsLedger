@@ -1,0 +1,23 @@
+<% if user_signed_in? %>
+<header>
+  <div>
+    <navbar class="navbar hide">
+    <i class="fa fa-close"></i>
+    <%= button_to "Home", groups_path, :method => :get, class:"nav-link" %>
+    <%= button_to "Log-out", destroy_user_session_path, :method => :delete, class:"nav-link" %>
+    </navbar>
+  </div>
+</header>
+
+
+<script type="text/javascript">
+function hideNav() {
+  document.querySelector('.navbar').classList.remove('flex')
+  document.querySelector(".navbar").classList.add('hide')
+}
+document.querySelector(".fa-close").addEventListener('click', hideNav);
+</script>
+<% end %>
+
+
+

@@ -1,14 +1,21 @@
-<%= link_to "Back to categories", groups_path %>
-<%= render @group %>
 
+<header class="category-header flex">
+  <%= link_to groups_path do%><i class="fa fa-arrow-left ham"></i><% end %>
+  <h2>DETAILS</h2>
+</header>
+<section class="general-details-div">
+<div class="group-details-div">
+ <%= render @group %>
+</div>
+<hr>
 <div id="records">
   <% @group.records.order(id: :desc).each do |record| %>
     <%= render partial: "records/record",  locals: {record: record} %>
+    <hr>
   <% end %>
 </div>
+</section>
 
-<div>
-  <%= link_to "Edit this group", edit_group_path(@group) %> |
-  <%= link_to "Add new Record", new_record_path %>
-  <%= button_to "Destroy this group", @group, method: :delete %>
+<div class="new-button-div flex">
+  <%= link_to "Add new Record", new_record_path , class: "new-button"%>
 </div>
