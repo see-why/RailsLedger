@@ -12,12 +12,12 @@
   <% end %>
 
   <div>
-    <%= form.text_field :name, class: "text-box first last", placeholder: "Name" %>
+    <%= form.text_field :name, class: "text-box first last", placeholder: "Name" , required: true %>
   </div>
 
   <div class="category-box">
     <%= form.label :icon, class: "unit-label", style: "display: block" %>
-    <%= form.file_field :icon %>
+    <%= form.file_field :icon,  required: true %>
   </div>
-  
+
 <% end %>

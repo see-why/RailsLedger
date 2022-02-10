@@ -12,16 +12,16 @@
   <% end %>
 
   <div class="text-box-div">
-    <%= form.text_field :name, class: "text-box first", placeholder: "Name" %>
+    <%= form.text_field :name, class: "text-box first", placeholder: "Name", required: true %>
   </div>
 
   <div class="text-box-div">
-    <%= form.number_field :amount, class: "text-box last first", placeholder: "Amount"%>
+    <%= form.number_field :amount, class: "text-box last first", placeholder: "Amount", required: true%>
   </div>
 
   <div class="category-box">
   <%= form.label "Categories", class: "unit-label", style: "display: block" %>
-  <%= form.select :groups, @categories.collect { |category| [category.name, category.id] }, {class: "full-width"}, {multiple: true}, { include_blank: '-- Select One --' }, required: true %>
+  <%= form.select :groups, @categories.collect { |category| [category.name, category.id] }, {class: "full-width"}, {multiple: true} %>
   </div>
 
 <% end %>
