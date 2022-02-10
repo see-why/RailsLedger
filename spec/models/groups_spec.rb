@@ -36,7 +36,7 @@ RSpec.describe Group, type: :model do
       end
 
       it 'returns total records amount' do
-        expect(subject.total_record_amount).to eq(2000)
+        expect(subject.total_record_amount_test).to eq(2000)
       end
     end
   end
