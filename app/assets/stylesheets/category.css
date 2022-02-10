@@ -1,0 +1,69 @@
+.category-image {
+  width: 100px;
+  height: 100px;
+}
+
+.image-div {
+  margin-right: 15px;
+}
+
+.category-header {
+  background-color: #3778c2;
+  border: 1px solid #3778c2;
+  align-items: baseline;
+}
+
+.groups {
+  background: #f3f1f1;
+  padding: 4%;
+  overflow-y: scroll;
+}
+
+.category-total-expense {
+  justify-content: space-between;
+}
+
+.category-total-expense-div,
+.specific-category {
+  border: 1px solid #fff;
+}
+
+.specific-category {
+  margin-bottom: 20px;
+  align-items: center;
+}
+
+.category-total-expense-div,
+.specific-category,
+.category-total-expense {
+  background: #fff;
+}
+
+.category-total-expense,
+.specific-category,
+.padding {
+  padding: 2%;
+}
+
+.category-total-expense,
+.padding {
+  color: #d3d3d3;
+}
+
+.small {
+  font-size: 14px;
+}
+
+.ham {
+  font-size: 30px;
+  color: #fff;
+  margin-left: 10px;
+}
+
+.new-button-div {
+  position: fixed;
+  background: #5fb523;
+  height: 150px;
+  bottom: 0;
+  width: 100%;
+}

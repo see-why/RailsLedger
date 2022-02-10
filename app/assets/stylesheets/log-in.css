@@ -1,0 +1,34 @@
+.text-box {
+  width: 98%;
+  border: 0;
+  padding: 1%;
+}
+
+.first {
+  border-top: 1px solid #d3d3d3;
+}
+
+.last {
+  border-bottom: 1px solid #d3d3d3;
+}
+
+.record-form {
+  margin-top: 10px;
+  padding: 2% 0% 2% 2%;
+  background: #fff;
+  width: 100%;
+}
+
+.category-box {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.text-box,
+.unit-label {
+  font-size: 20px;
+}
+
+.unit-label {
+  margin-bottom: 10px;
+}

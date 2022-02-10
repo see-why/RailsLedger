@@ -13,3 +13,59 @@
  *= require_tree .
  *= require_self
  */
+
+@font-face {
+  font-family: 'Proxi-Light';
+  src: url('Proxima_Nova_Alt_Light.otf');
+}
+
+@font-face {
+  font-family: 'Proxi-Bold';
+  src: url('Proxima_Nova_Bold.otf');
+}
+
+body {
+  font-family: 'Proxi-Bold', Arial, Helvetica, sans-serif;
+  background: #f3f1f1;
+  margin: 0;
+}
+
+h1,
+h2 {
+  color: #fff;
+  text-align: center;
+}
+
+strong {
+  color: #434b54;
+}
+
+a {
+  text-decoration: none;
+  color: #a9a9a9;
+}
+
+hr {
+  width: 96%;
+}
+
+input[type="file"] {
+  color: #fff;
+  background: #5fb523;
+  border: 1px solid;
+  padding: 2%;
+}
+
+.flex {
+  display: flex;
+}
+
+h1,
+h2,
+.complete-width {
+  width: 100%;
+}
+
+.complete-width {
+  line-height: 1px;
+}

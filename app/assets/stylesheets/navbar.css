@@ -1,0 +1,21 @@
+.navbar {
+  position: fixed;
+  width: 150px;
+  background: #3778c2;
+  flex-direction: column;
+}
+
+.hide {
+  display: none;
+}
+
+.show {
+  display: block;
+}
+
+.fa-close {
+  font-size: 25px;
+  color: #fff;
+  align-self: center;
+  margin-top: 10px;
+}
