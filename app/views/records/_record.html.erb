@@ -9,9 +9,5 @@
     <%= record.amount %>
   </p>
 
-  <p>
-    <strong>User:</strong>
-    <%= record.user_id %>
-  </p>
-
+  <p><%= record.created_at.strftime('%d %b %Y') %></p>
 </div>
