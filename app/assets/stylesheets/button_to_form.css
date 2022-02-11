@@ -1,0 +1,12 @@
+.button_to {
+  text-align: center;
+  padding: 20%;
+}
+
+.nav-link {
+  color: #fff;
+  border: 0;
+  background: none;
+  font-size: 20px;
+  border-bottom: 1px solid #d3d3d3;
+}

@@ -1,23 +1,19 @@
-<%= form_for(resource, as: resource_name, url: session_path(resource_name), data: { turbo: false }, html: { class: "login-form"}) do |f| %>
+<header class="category-header flex">
+  <%= link_to users_path do%><i class="fa fa-arrow-left ham"></i><% end %>
+  <h2>LOGIN</h2>
+  <input type="submit" value="Log in" form="login-form" class="save-button">
+</header>
+
+<%= form_for(resource, as: resource_name, url: session_path(resource_name), data: { turbo: false }, html: { class: "record-form", id: "login-form"}) do |f| %>
   <div class="field">
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" ,placeholder: "Email", class: "text-box" %>
+    <%= f.email_field :email, autofocus: true, autocomplete: "email" ,placeholder: "Email", class: "text-box first" %>
   </div>
 
   <div class="field">
-    <%= f.password_field :password, autocomplete: "current-password", placeholder: "Password", class: "text-box" %>
+    <%= f.password_field :password, autocomplete: "current-password", placeholder: "Password", class: "text-box first last" %>
   </div>
-
-  <% if devise_mapping.rememberable? %>
-    <div class="field">
-      <%= f.check_box :remember_me %>
-      <%= f.label :remember_me %>
-    </div>
-  <% end %>
-
-  <div class="actions">
-    <%= f.submit "Log in", class: "login-button" %>
-  </div>
-  <%= render "devise/shared/links" %>
 
 <% end %>
-
+<div class="links-div flex">
+  <%= render "devise/shared/links" %>
+</div>

@@ -1,17 +1,11 @@
 <div id="<%= dom_id record %>">
-  <p>
-    <strong>Name:</strong>
-    <%= record.name %>
+  <p class="category-total-expense flex">
+    Record N'<%=record.id %> <strong>Name: <%= record.name %></strong>
   </p>
 
-  <p>
-    <strong>Amount:</strong>
-    <%= record.amount %>
+  <p class="category-total-expense">
+    Amount:   <strong>$<%= record.amount %></strong>
   </p>
 
-  <p>
-    <strong>User:</strong>
-    <%= record.user_id %>
-  </p>
-
+  <p class="padding small"><%= record.created_at.strftime('%d %b %Y at %I %M %p') %></p>
 </div>

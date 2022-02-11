@@ -1,4 +1,4 @@
-<%= form_with(model: group) do |form| %>
+<%= form_with(model: group, class: "record-form", id: "group-form") do |form| %>
   <% if group.errors.any? %>
     <div style="color: red">
       <h2><%= pluralize(group.errors.count, "error") %> prohibited this group from being saved:</h2>
@@ -12,16 +12,12 @@
   <% end %>
 
   <div>
-    <%= form.label :name, style: "display: block" %>
-    <%= form.text_field :name %>
+    <%= form.text_field :name, class: "text-box first last", placeholder: "Name" , required: true %>
   </div>
 
-  <div>
-    <%= form.label :user_id, style: "display: block" %>
-    <%= form.text_field :user_id %>
+  <div class="category-box">
+    <%= form.label :icon, class: "unit-label", style: "display: block" %>
+    <%= form.file_field :icon,  required: true %>
   </div>
 
-  <div>
-    <%= form.submit %>
-  </div>
 <% end %>

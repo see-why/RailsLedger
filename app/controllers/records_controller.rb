@@ -3,7 +3,7 @@ class RecordsController < ApplicationController
 
   # GET /records or /records.json
   def index
-    @records = Record.all
+    @records = current_user.records
   end
 
   # GET /records/1 or /records/1.json
@@ -12,25 +12,43 @@ class RecordsController < ApplicationController
   # GET /records/new
   def new
     @record = Record.new
+    @categories = current_user.groups
   end
 
   # GET /records/1/edit
   def edit; end
 
   # POST /records or /records.json
+  # rubocop:disable Metrics/MethodLength
   def create
-    @record = Record.new(record_params)
+    @record = current_user.records.new(record_params)
+    @group_ids = params[:record][:groups]
+    if @group_ids.empty? || @group_ids == ['']
+      redirect_to new_record_url, alert: 'Select a category or create one.'
+    else
+      respond_to do |format|
+        if @record.save
+          @group_ids.each do |id|
+            next if id == ''
 
-    respond_to do |format|
-      if @record.save
-        format.html { redirect_to record_url(@record), notice: 'Record was successfully created.' }
-        format.json { render :show, status: :created, location: @record }
-      else
-        format.html { render :new, status: :unprocessable_entity }
-        format.json { render json: @record.errors, status: :unprocessable_entity }
+            @group = current_user.groups.find(id.to_i)
+            @group_record = GroupRecord.new(record_id: @record.id, group_id: id)
+            @group_record.save
+            @group.group_records << @group_record
+            @group.save
+            @record.group_records << @group_record
+          end
+          @record.save
+          format.html { redirect_to group_url(@group_ids.last), notice: 'Record was successfully created.' }
+          format.json { render :show, status: :created, location: @record }
+        else
+          format.html { render :new, status: :unprocessable_entity }
+          format.json { render json: @record.errors, status: :unprocessable_entity }
+        end
       end
     end
   end
+  # rubocop:enable Metrics/MethodLength
 
   # PATCH/PUT /records/1 or /records/1.json
   def update
@@ -64,6 +82,6 @@ class RecordsController < ApplicationController
 
   # Only allow a list of trusted parameters through.
   def record_params
-    params.require(:record).permit(:name, :amount, :user_id)
+    params.require(:record).permit(:name, :amount, :groups)
   end
 end

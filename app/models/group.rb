@@ -12,7 +12,10 @@ class Group < ApplicationRecord
   end
 
   def total_record_amount
-    p records
+    records.sum(:amount)
+  end
+
+  def total_record_amount_test
     sum = 0
     records.each do |record|
       sum += record.amount
