@@ -1,5 +1,4 @@
 require 'rails_helper'
-# rubocop:disable Metrics/BlockLength
 
 RSpec.feature 'Category page', js: true, type: :feature do
   background do
@@ -40,5 +39,3 @@ RSpec.feature 'Category page', js: true, type: :feature do
     end
   end
 end
-
-# rubocop:enable Metrics/BlockLength
