@@ -1,0 +1,29 @@
+<header class="category-header flex">
+  <i class="fa fa-bars ham"></i>
+  <h1>CATEGORIES</h1>
+</header>
+
+<div class="category-total-expense-div">
+<p class="category-total-expense flex">Total Expenditure        <strong>$<%= @sum %></strong></p>
+</div>
+
+<div id="groups" class="groups">
+  <% @groups.each do |group| %>
+    <%= render group %>
+  <% end %>
+</div>
+
+<div class="new-button-div flex">
+  <%= link_to "NEW CATEGORY", new_group_path, class:"new-button" %>
+</div>
+
+
+
+<script type="text/javascript">
+function showNav() {
+  document.querySelector('.navbar').classList.add('flex')
+  document.querySelector(".navbar").classList.remove('hide')
+}
+
+document.querySelector(".ham").addEventListener('click', showNav);
+</script>

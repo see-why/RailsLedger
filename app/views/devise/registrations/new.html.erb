@@ -1,0 +1,28 @@
+<header class="category-header flex">
+  <%= link_to users_path do%><i class="fa fa-arrow-left ham"></i><% end %>
+  <h2>REGISTER</h2>
+  <input type="submit" value="Next" form="register-form" class="save-button">
+</header>
+<%= form_for(resource, as: resource_name, url: registration_path(resource_name), data: { turbo: false }, html: { class: "record-form", id: "register-form"}) do |f| %>
+  <%= render "devise/shared/error_messages", resource: resource %>
+  <div class="field">
+  <%= f.text_field :name, autofocus: true, class: "text-box first", placeholder: "Name", required: true %>
+  </div>
+
+  <div class="field">
+    <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "text-box first", placeholder: "Email", required: true %>
+  </div>
+
+  <div class="field">
+    <%= f.password_field :password, autocomplete: "new-password", class: "text-box first", placeholder: "Password #{'(' + @minimum_password_length.to_s + ' characters minimum)' if @minimum_password_length}", required: true %>
+  </div>
+
+  <div class="field">
+    <%= f.password_field :password_confirmation, autocomplete: "new-password", class: "text-box first last", placeholder: "Password Confirmation", required: true %>
+  </div>
+
+  <%= f.hidden_field :posts_counter, :value => 0 %>
+
+<% end %>
+
+

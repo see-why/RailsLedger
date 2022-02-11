@@ -1,0 +1,26 @@
+.flash-div {
+  position: fixed;
+  color: #fff;
+  top: 45%;
+  z-index: 100;
+  left: 19%;
+  animation: hideAnimation 0s ease-in 5s;
+  animation-fill-mode: forwards;
+}
+
+.notice,
+.alert {
+  background: #3778c2;
+  padding: 2%;
+  width: 100%;
+  font-size: 20px;
+  margin: 0;
+}
+
+@keyframes hideAnimation {
+  to {
+    visibility: hidden;
+    width: 0;
+    height: 0;
+  }
+}

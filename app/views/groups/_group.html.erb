@@ -1,0 +1,16 @@
+<div id="<%= dom_id group %>" class="flex specific-category">
+  <div class="image-div">
+    <%= image_tag(group.icon, class: 'category-image') %>
+  </div>
+
+  <div class="complete-width">
+  <p class="category-total-expense flex">
+    <%= link_to "#{group.name}", group %>  <strong>$<%= group.total_record_amount %></strong>
+  </p>
+
+  <p class="padding">
+    Records #<%= group.total_record %> 
+  </p>
+  <p class="padding small"><%= group.created_at.strftime('%d %b %Y') %></p>
+  </div>
+</div>

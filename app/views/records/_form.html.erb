@@ -1,0 +1,27 @@
+<%= form_with(model: record, class: "record-form", id: "record-form") do |form| %>
+  <% if record.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(record.errors.count, "error") %> prohibited this record from being saved:</h2>
+
+      <ul>
+        <% record.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="text-box-div">
+    <%= form.text_field :name, class: "text-box first", placeholder: "Name", required: true %>
+  </div>
+
+  <div class="text-box-div">
+    <%= form.number_field :amount, class: "text-box last first", placeholder: "Amount", required: true%>
+  </div>
+
+  <div class="category-box">
+  <%= form.label "Categories", class: "unit-label", style: "display: block" %>
+  <%= form.select :groups, @categories.collect { |category| [category.name, category.id] }, {class: "full-width"}, {multiple: true} %>
+  </div>
+
+<% end %>

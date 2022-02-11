@@ -1,0 +1,9 @@
+<header class="category-header flex">
+  <%= link_to groups_path do%><i class="fa fa-arrow-left ham"></i><% end %>
+  <h2>NEW CATEGORY</h2>
+  <input type="submit" value="Save" form="group-form" class="save-button">
+</header>
+
+<%= render "form", group: @group %>
+
+<br>

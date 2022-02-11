@@ -1,0 +1,21 @@
+<header class="category-header flex">
+  <%= link_to users_path do%><i class="fa fa-arrow-left ham"></i><% end %>
+  <h2>CHANGE YOUR PASSWORD</h2>
+  <input type="submit" value="Save" form="reset-password-form" class="save-button">
+</header>
+<%= form_for(resource, as: resource_name, url: password_path(resource_name), data: { turbo: false }, html: { method: :put, class: "record-form", id: "reset-password-form"}) do |f| %>
+  <%= render "devise/shared/error_messages", resource: resource %>
+  <%= f.hidden_field :reset_password_token %>
+
+  <div class="field">
+    <%= f.password_field :password, autofocus: true, autocomplete: "new-password", class: "text-box first", placeholder: "New Password #{'(' + @minimum_password_length.to_s + ' characters minimum)' if @minimum_password_length}", required: true %>
+  </div>
+
+  <div class="field">
+    <%= f.password_field :password_confirmation, autocomplete: "new-password", class: "text-box first last", placeholder: "New Password Confirmation" %>
+  </div>
+<% end %>
+
+<div class="links-div flex">
+  <%= render "devise/shared/links" %>
+</div>
