@@ -74,3 +74,11 @@ h2,
 .complete-width {
   line-height: 1px;
 }
+
+@media only screen and (max-width: 990) {
+  .my-profile-info h3,
+  .my-character-info h2,
+  .my-character-info h3 {
+    font-size: large;
+  }
+}
