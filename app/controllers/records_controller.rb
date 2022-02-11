@@ -1,5 +1,5 @@
 class RecordsController < ApplicationController
-  before_action :set_record, only: %i[show edit update destroy]
+  before_action :authenticate_user!
 
   # GET /records or /records.json
   def index
