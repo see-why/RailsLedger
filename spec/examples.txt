@@ -1,0 +1,34 @@
+example_id                                            | status | run_time        |
+----------------------------------------------------- | ------ | --------------- |
+./spec/integration/groups/groups_index_spec.rb[1:1:1] | passed | 2.33 seconds    |
+./spec/integration/groups/groups_index_spec.rb[1:1:2] | passed | 4.11 seconds    |
+./spec/integration/groups/groups_index_spec.rb[1:2:1] | passed | 4.85 seconds    |
+./spec/integration/records/records_add_spec.rb[1:1:1] | passed | 8.36 seconds    |
+./spec/integration/records/records_add_spec.rb[1:1:2] | passed | 5.19 seconds    |
+./spec/integration/records/records_add_spec.rb[1:1:3] | passed | 4.39 seconds    |
+./spec/integration/records/records_add_spec.rb[1:2:1] | passed | 4.31 seconds    |
+./spec/integration/users/users_index_spec.rb[1:1:1]   | passed | 3.97 seconds    |
+./spec/integration/users/users_index_spec.rb[1:1:2]   | passed | 3.93 seconds    |
+./spec/integration/users/users_index_spec.rb[1:2:1]   | passed | 2.26 seconds    |
+./spec/integration/users/users_index_spec.rb[1:3:1]   | passed | 3.6 seconds     |
+./spec/models/groups_spec.rb[1:1:1]                   | passed | 1.79 seconds    |
+./spec/models/groups_spec.rb[1:1:2]                   | passed | 0.01374 seconds |
+./spec/models/groups_spec.rb[1:1:3:1]                 | passed | 0.01188 seconds |
+./spec/models/groups_spec.rb[1:1:3:2]                 | passed | 0.01127 seconds |
+./spec/models/records_spec.rb[1:1:1]                  | passed | 0.00561 seconds |
+./spec/models/records_spec.rb[1:1:2]                  | passed | 2.05 seconds    |
+./spec/models/users_spec.rb[1:1:1]                    | passed | 0.00433 seconds |
+./spec/models/users_spec.rb[1:1:2]                    | passed | 0.00602 seconds |
+./spec/models/users_spec.rb[1:1:3]                    | passed | 0.00456 seconds |
+./spec/requests/groups_spec.rb[1:1:1]                 | failed | 0.00705 seconds |
+./spec/requests/groups_spec.rb[1:1:2]                 | failed | 0.00679 seconds |
+./spec/requests/groups_spec.rb[1:1:3]                 | failed | 0.19513 seconds |
+./spec/requests/groups_spec.rb[1:2:1]                 | failed | 0.00674 seconds |
+./spec/requests/groups_spec.rb[1:2:2]                 | failed | 0.00848 seconds |
+./spec/requests/groups_spec.rb[1:2:3]                 | failed | 0.00773 seconds |
+./spec/requests/records_spec.rb[1:1:1]                | failed | 0.0072 seconds  |
+./spec/requests/records_spec.rb[1:1:2]                | failed | 0.00739 seconds |
+./spec/requests/records_spec.rb[1:1:3]                | failed | 0.00748 seconds |
+./spec/requests/users_spec.rb[1:1:1]                  | passed | 0.00742 seconds |
+./spec/requests/users_spec.rb[1:1:2]                  | passed | 0.00812 seconds |
+./spec/requests/users_spec.rb[1:1:3]                  | passed | 0.00792 seconds |
