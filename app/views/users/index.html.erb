@@ -1,4 +1,7 @@
-<h1>Welcome to Rails Ledger!.</h1>
-
-<%= link_to "Log in", new_user_session_path, class:"notlogged-btn signin" %>
-<%= link_to "Create account", new_user_registration_path, class:"notlogged-btn create" %>
+<div class="main-image-div flex">
+  <%= image_tag('Rails_LEDGER.png', class: 'main-image') %>
+</div>
+<div class="login-links-div flex">
+  <%= link_to "Log in", new_user_session_path, class:"login-links flex" %>
+  <%= link_to "Sign Up", new_user_registration_path, class:"login-links flex" %>
+</div>
