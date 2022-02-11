@@ -1,0 +1,36 @@
+.main-image {
+  object-fit: cover;
+}
+
+.main-image-div {
+  height: 80vh;
+  width: 100%;
+}
+
+.main-image-div,
+.login-links-div {
+  background: #d3d3d3;
+}
+
+.main-image-div,
+.login-links {
+  justify-content: center;
+}
+
+.login-links-div {
+  height: 20vh;
+  flex-direction: column;
+  width: 100%;
+}
+
+.login-links {
+  font-size: 25px;
+  height: 40%;
+  width: 90%;
+  padding: 5%;
+  align-items: center;
+}
+
+.login-links:hover {
+  background-color: #3778c2;
+}

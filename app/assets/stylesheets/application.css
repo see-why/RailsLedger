@@ -28,6 +28,7 @@ body {
   font-family: 'Proxi-Bold', Arial, Helvetica, sans-serif;
   background: #f3f1f1;
   margin: 0;
+  height: 100vh;
 }
 
 h1,
@@ -54,6 +55,10 @@ input[type="file"] {
   background: #5fb523;
   border: 1px solid;
   padding: 2%;
+}
+
+::placeholder {
+  color: #d3d3d3;
 }
 
 .flex {
