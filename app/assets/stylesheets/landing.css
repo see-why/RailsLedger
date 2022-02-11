@@ -26,11 +26,13 @@
 .login-links {
   font-size: 25px;
   height: 40%;
-  width: 90%;
+  width: 80%;
   padding: 5%;
   align-items: center;
+  align-self: center;
 }
 
 .login-links:hover {
   background-color: #3778c2;
+  border: 1px solid;
 }
