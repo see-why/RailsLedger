@@ -82,3 +82,13 @@ h2,
     font-size: large;
   }
 }
+
+@media only screen and (min-width: 1200) {
+  .login-links {
+    width: 40%;
+  }
+
+  .login-links-div {
+    flex-direction: row;
+  }
+}

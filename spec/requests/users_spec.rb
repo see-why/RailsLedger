@@ -13,7 +13,7 @@ RSpec.describe 'Users', type: :request do
     end
 
     it 'contains correct text' do
-      expect(response.body).to include('Welcome to Rails Ledger')
+      expect(response.body).to include('Log in')
     end
   end
 end

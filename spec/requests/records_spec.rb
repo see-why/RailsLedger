@@ -13,7 +13,7 @@ RSpec.describe 'Records', type: :request do
     end
 
     it 'contains correct text' do
-      expect(response.body).to include('New Record')
+      expect(response.body).to include('NEW RECORD')
     end
   end
 end
