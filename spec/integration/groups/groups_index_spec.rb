@@ -12,6 +12,14 @@ RSpec.feature 'Category page', js: true, type: :feature do
 
     @first_category = Group.create(id: 1, name: 'Food', author: @first_user)
 
+    @first_category.icon.attach(
+      io: File.open(Rails.root.join('spec', 'images', 'ham.png')),
+      filename: 'ham.png',
+      content_type: 'application/png'
+    )
+
+    @first_category.save!
+
     @first_user.groups << @first_category
 
     @record = Record.create(name: 'Junk', amount: 1000, author: @first_user)
@@ -36,6 +44,21 @@ RSpec.feature 'Category page', js: true, type: :feature do
     it 'redirects to the new category page' do
       click_link 'NEW CATEGORY'
       expect(current_path).to eql(new_group_path)
+    end
+  end
+
+  describe 'Categories home page' do
+    it 'should see users categories' do
+      expect(page).to have_content 'Food'
+    end
+  
+    it 'should show total amount' do
+      expect(page).to have_content '1000'
+    end
+  
+    it 'should have redirect to show page when you click category name' do
+      click_link @first_category.name
+      expect(current_path).to eql(group_path(id: @first_category.id))
     end
   end
 end
