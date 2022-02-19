@@ -1,5 +1,6 @@
 require 'rails_helper'
 
+# rubocop:disable Metrics/BlockLength
 RSpec.feature 'Category page', js: true, type: :feature do
   background do
     visit users_path
@@ -51,14 +52,15 @@ RSpec.feature 'Category page', js: true, type: :feature do
     it 'should see users categories' do
       expect(page).to have_content 'Food'
     end
-  
+
     it 'should show total amount' do
       expect(page).to have_content '1000'
     end
-  
+
     it 'should have redirect to show page when you click category name' do
       click_link @first_category.name
       expect(current_path).to eql(group_path(id: @first_category.id))
     end
   end
 end
+# rubocop:enable Metrics/BlockLength
