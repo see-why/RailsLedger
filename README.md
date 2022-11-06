@@ -49,6 +49,6 @@ Give a ⭐️ if you like this project!
 
 ## Acknowledgments
 - Design by [Gregoire Vella on Behance](https://www.behance.net/gregoirevella)
-- my dog Perry for the comforting lick here and there
+- my dog Bubbles for the comforting lick here and there
 ## 📝 License
 - This project is [MIT](./LICENSE) licensed.
